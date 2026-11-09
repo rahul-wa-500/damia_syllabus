@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  min-height: 100vh;
+  background: #fff8ed;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #fff;
+}
+
+.header-image {
+  display: block;
+  width: 100%;
+  max-width: 1824px;
+  height: auto;
+}
+
+/* content */
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: clamp(16px, 2vw, 24px);
+  gap: 16px;
+}
+
+/* Card */
+.card {
+  min-width: 0;
+  margin: 0;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid hsl(0, 10%, 94%);
+  background: #fff;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.card .card-title {
+  margin: 0 0 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.card .download-btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.download-btns .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #cb2200;
+  border-radius: 8px;
+  background: #ffd0bb;
+  color: #0a0a0a;
+  font: inherit;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.download-btns .btn--downloadable {
+  border-color: #2e7d32;
+  background: #c8e6c9;
+}
+
+.download-btns .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(14, 104, 255, 0.12);
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(calc(100% - 32px), 1152px);
+  max-width: 1152px;
+  margin: 0 auto 16px;
+  padding: 8px clamp(12px, 2vw, 16px);
+  background: rgb(255, 219, 120);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.note-txt {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 360px) {
+  .content {
+    gap: 12px;
+    padding: 12px;
+  }
+}
